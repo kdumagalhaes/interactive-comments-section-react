@@ -17,6 +17,12 @@ export const GlobalStyles = createGlobalStyle`
     // layout
     --mobile: 480px;
     --desktop: 1440px;
+
+    // border
+    --border-radius: 25px;
+
+    // padding
+    --comment-padding: 24px;
 }
 * {
     margin: 0;
@@ -36,7 +42,7 @@ ul {
 }
 body {
     width: 100%;
-
+    background: var(--neutral-very-light-gray);
 }
 body, input, textarea, button {
     font-family: 'Rubik', sans-serif;

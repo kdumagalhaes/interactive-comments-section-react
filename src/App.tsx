@@ -1,10 +1,13 @@
+// components
+import AddComment from "./components/AddComment";
+
 // assets
 import { GlobalStyles } from "./css/global";
 
 const App = () => {
   return (
     <>
-      <h1>Salut, France !</h1>
+      <AddComment />
       <GlobalStyles />
     </>
   );
