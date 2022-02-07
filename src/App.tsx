@@ -1,10 +1,14 @@
+// components
+import AddComment from "./components/AddComment";
+
 // assets
 import { GlobalStyles } from "./css/global";
+import julioSomoAvatar from "./img/avatars/image-juliusomo.webp";
 
 const App = () => {
   return (
     <>
-      <h1>Salut, France !</h1>
+      <AddComment avatar={julioSomoAvatar} username="juliosomo" />
       <GlobalStyles />
     </>
   );
