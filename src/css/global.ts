@@ -20,9 +20,6 @@ export const GlobalStyles = createGlobalStyle`
 
     // border
     --border-radius: 25px;
-
-    // padding
-    --comment-padding: 24px;
 }
 * {
     margin: 0;
