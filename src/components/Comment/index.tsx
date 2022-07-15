@@ -3,8 +3,7 @@ import { MainContainer } from "./styles";
 // assets
 import deleteIcon from "../../img/icons/icon-delete.svg";
 import editIcon from "../../img/icons/icon-edit.svg";
-import { useEffect, useState } from "react";
-
+import threeDotsIcon from "../../img/icons/icon-three-dots.svg";
 interface CommentProps {
   avatar?: string;
   username?: string;
@@ -19,7 +18,10 @@ const Comment = ({ avatar, username }: CommentProps): JSX.Element => {
           <span className="username">{username}</span>
           <span className="comment-time">1 hour ago</span>
         </div>
-        <div className="flex-row">
+        <button className="mobile-menu">
+          <img src={threeDotsIcon} alt="mobile menu" />
+        </button>
+        <div className="flex-row desktop-btns">
           <button className="btn delete">
             <img src={deleteIcon} alt="delete comment" className="icon" />
             <span className="delete-text">Delete</span>

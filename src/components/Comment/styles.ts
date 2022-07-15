@@ -19,6 +19,24 @@ export const MainContainer = styled.div`
     margin-bottom: 20px;
   }
 
+  .desktop-btns {
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+
+  .mobile-menu {
+    background-color: var(--neutral-light-gray);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+
+    @media (max-width: 480px) {
+      display: block;
+    }
+  }
+
   .desktop-avatar {
     width: 100%;
     max-width: 40px;
