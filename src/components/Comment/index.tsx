@@ -4,12 +4,15 @@ import { MainContainer } from "./styles";
 import deleteIcon from "../../img/icons/icon-delete.svg";
 import editIcon from "../../img/icons/icon-edit.svg";
 import threeDotsIcon from "../../img/icons/icon-three-dots.svg";
+import { useState } from "react";
 interface CommentProps {
   avatar?: string;
   username?: string;
 }
 
 const Comment = ({ avatar, username }: CommentProps): JSX.Element => {
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <MainContainer>
       <div className="top-row">
@@ -18,9 +21,22 @@ const Comment = ({ avatar, username }: CommentProps): JSX.Element => {
           <span className="username">{username}</span>
           <span className="comment-time">1 hour ago</span>
         </div>
-        <button className="mobile-menu">
+        <button
+          onClick={() => setIsActive(!isActive)}
+          className="mobile-btn-menu"
+        >
           <img src={threeDotsIcon} alt="mobile menu" />
         </button>
+        <div className={isActive ? "mobile-menu expanded" : "mobile-menu"}>
+          <button className="btn delete">
+            <img src={deleteIcon} alt="delete comment" className="icon" />
+            <span className="delete-text">Delete</span>
+          </button>
+          <button className="btn edit">
+            <img src={editIcon} alt="edit comment" className="icon" />
+            <span className="edit-text">Edit</span>
+          </button>
+        </div>
         <div className="flex-row desktop-btns">
           <button className="btn delete">
             <img src={deleteIcon} alt="delete comment" className="icon" />

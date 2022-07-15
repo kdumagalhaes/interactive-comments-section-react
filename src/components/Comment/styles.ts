@@ -7,6 +7,7 @@ export const MainContainer = styled.div`
   border-radius: var(--border-radius);
   margin: 20px 0;
   padding: 24px;
+  position: relative;
 
   .top-row,
   .flex-row {
@@ -25,7 +26,7 @@ export const MainContainer = styled.div`
     }
   }
 
-  .mobile-menu {
+  .mobile-btn-menu {
     background-color: var(--neutral-light-gray);
     border: none;
     border-radius: 5px;
@@ -35,6 +36,27 @@ export const MainContainer = styled.div`
     @media (max-width: 480px) {
       display: block;
     }
+  }
+
+  .mobile-menu {
+    position: absolute;
+    right: 25px;
+    top: 70px;
+    width: 150px;
+    height: 100px;
+    background-color: var(--neutral-very-light-gray);
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+
+  .expanded {
+    display: flex;
   }
 
   .desktop-avatar {
