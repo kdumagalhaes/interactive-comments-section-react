@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
     --desktop: 1440px;
 
     // border
-    --border-radius: 25px;
+    --border-radius: 10px;
 }
 * {
     margin: 0;
